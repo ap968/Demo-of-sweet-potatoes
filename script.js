@@ -2,11 +2,13 @@ getComments();
 function getComments(){
     $.get("/comments", function (data) {
         if(!data){
-            console.log("No data received");            
+            console.log("No data received");
+            //alert( "No data received" );
         }
         console.log("Received data:");
         for(var i=0; i<data.length; i++){
             console.log(data[i].fullname);
+            //alert( "No data received: " + data[i].fullname);
         }
         showComments(data);
     });
@@ -26,7 +28,7 @@ function showComments(comments){
         var section = document.createElement("section");
         section.className += "suggestion";
         var heading = document.createElement("h3");
-        heading.innerHTML = comments[i].fullname;
+        heading.innerHTML = comments[i].name;
         var comment = document.createElement("p");
         comment.innerHTML = comments[i].comment;
         section.appendChild(heading);

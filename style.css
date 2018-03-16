@@ -18,7 +18,7 @@ header{
 header h1{
     margin: 0;
 }
-aside, section{
+aside{
     width: 250px;
     float: left;
     padding-left: 10px;
@@ -27,6 +27,8 @@ aside, section{
     margin: 0 auto;
 }
 section{
+    padding-left: 10px;
+    background-color: white;
     clear: unset;
 }
 article{
